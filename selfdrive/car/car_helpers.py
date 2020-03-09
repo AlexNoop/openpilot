@@ -238,6 +238,8 @@ def get_car(logcan, sendcan, has_relay=False):
 
     cloudlog.warning("car doesn't match any fingerprints: %r", fingerprints)
     candidate = "mock"
+    
+    candidate = "HONDA CIVIC HATCHBACK 2017 SEDAN/COUPE 2019"
 
   if is_online():
     x = threading.Thread(target=log_fingerprinted, args=(candidate,))
