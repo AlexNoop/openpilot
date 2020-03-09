@@ -4,6 +4,7 @@ from common.params import Params, put_nonblocking
 default_conf = {
   'DragonEnableDashcam': '0',
   'DragonEnableDriverSafetyCheck': '1',
+  'DragonEnableAutoShutdown': '1',
   'DragonAutoShutdownAt': '0', # in minute
   'DragonEnableSteeringOnSignal': '0',
   'DragonEnableLogger': '1',
@@ -50,6 +51,7 @@ default_conf = {
   'DragonUILead': '1',
   'DragonUIPath': '1',
   'DragonUIBlinker': '0',
+  'DragonUIDMView': '0',
   'DragonEnableDriverMonitoring': '1',
   'DragonCarModel': '',
   'DragonEnableSlowOnCurve': '1',
@@ -64,6 +66,7 @@ default_conf = {
   'DragonAutoLCDelay': 2,
   'DragonBTG': 0,
   'DragonBootHotspot': 0,
+  'DragonAccelProfile': '0',
 }
 
 deprecated_conf = {
