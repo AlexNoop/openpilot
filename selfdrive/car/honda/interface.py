@@ -375,6 +375,9 @@ class CarInterface(CarInterfaceBase):
 
     ret.stoppingControl = True
     ret.startAccel = 0.5
+    
+    # # TODO: refactor to be based on the gearbox messages. Determine gearbox messages. Only support certain car variants down below?
+    ret.transmissionType = car.CarParams.TransmissionType.manual
 
     ret.steerActuatorDelay = 0.1
     ret.steerRateCost = 0.5
