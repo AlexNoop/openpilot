@@ -1,3 +1,21 @@
+2020-03-06
+========================
+* [DEVEL] 加入葡萄牙語支持。(感謝 berno22 提供)
+* [DEVEL] 加入大陸 2018 Camry、2020 RAV4 指紋。(感謝 笨木匠 提供)
+* [DEVEL] 建立 devel-i18n 取代 devel-en。
+* [DEVEL] devel-en is deprecated, please switch to devel-i18n instead.
+
+2020-03-04
+========================
+* [DEVEL] 加入顯示駕駛監控畫面。
+* [DEVEL] 加入加速模式選項。(特別感謝 @arne182, @cgw1968-5779 提供 PR)
+* [DEVEL] 修正 shutdownd 在 comma two 可能會不正常關機的錯誤。(感謝 @Wei, @Rzxd 回報)
+
+2020-02-25
+========================
+* [DEVEL] 更新至最新的 commaai:devel (0.7.3)。
+* [0.7.3] 建立，基於 2020-02-25 DEVEL。 
+
 2020-02-21
 ========================
 * [DEVEL] 更新至最新的 commaai:devel (0.7.3)。
