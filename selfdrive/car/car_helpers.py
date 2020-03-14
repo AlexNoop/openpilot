@@ -240,7 +240,7 @@ def get_car(logcan, sendcan, has_relay=False):
     cloudlog.warning("car doesn't match any fw: %s" % car_fw)
     candidate = "mock"
     
-    candidate = "HONDA CIVIC HATCHBACK 2017 SEDAN/COUPE 2019"
+   # candidate = "HONDA CIVIC HATCHBACK 2017 SEDAN/COUPE 2019"
 
   if is_online():
     x = threading.Thread(target=log_fingerprinted, args=(candidate,))
