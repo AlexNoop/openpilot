@@ -152,7 +152,10 @@ class Planner():
       modified = dp_get_last_modified()
       if self.dp_last_modified != modified:
         self.dragon_slow_on_curve = False if self.params.get("DragonEnableSlowOnCurve", encoding='utf8') == "0" else True
-        self.dragon_accel_profile = int(self.params.get("DragonAccelProfile", encoding='utf8'))
+        try:
+          self.dragon_accel_profile = int(self.params.get("DragonAccelProfile", encoding='utf8'))
+        except (TypeError, ValueError):
+          self.dragon_accel_profile = ACCEL_NORMAL_MODE
         if self.dragon_accel_profile >= 2 or self.dragon_accel_profile <= -2:
           self.dragon_accel_profile = 0
         self.dp_last_modified = modified
@@ -253,8 +256,7 @@ class Planner():
     radar_can_error = car.RadarData.Error.canError in radar_errors
 
     # **** send the plan ****
-    plan_send = messaging.new_message()
-    plan_send.init('plan')
+    plan_send = messaging.new_message('plan')
 
     plan_send.valid = sm.all_alive_and_valid(service_list=['carState', 'controlsState', 'radarState'])
 
