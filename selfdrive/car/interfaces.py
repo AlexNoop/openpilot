@@ -192,11 +192,11 @@ class CarStateBase:
     v_ego_x = self.v_ego_kf.update(v_ego_raw)
     return float(v_ego_x[0]), float(v_ego_x[1])
 
- # @staticmethod
- # def parse_gear_shifter(gear):
- #   return {'P': GearShifter.park, 'R': GearShifter.reverse, 'N': GearShifter.neutral,
- #           'E': GearShifter.eco, 'T': GearShifter.manumatic, 'D': GearShifter.drive,
- #           'S': GearShifter.sport, 'L': GearShifter.low, 'B': GearShifter.brake}.get(gear, GearShifter.unknown)
+  @staticmethod
+  def parse_gear_shifter(gear):
+    return {'P': GearShifter.park, 'R': GearShifter.reverse, 'N': GearShifter.neutral,
+            'E': GearShifter.eco, 'T': GearShifter.manumatic, 'D': GearShifter.drive,
+            'S': GearShifter.sport, 'L': GearShifter.low, 'B': GearShifter.brake}.get(gear, GearShifter.unknown)
 
   @staticmethod
   def get_cam_can_parser(CP):
